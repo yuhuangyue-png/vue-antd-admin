@@ -5,7 +5,7 @@ const Random = Mock.Random
 
 const timeList = [
   {
-    CN: '早上好',
+    CN: '早上好cao',
     HK: '早晨啊',
     US: 'Good morning',
   },{
