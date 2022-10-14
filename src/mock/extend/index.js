@@ -9,7 +9,7 @@ const timeList = [
     HK: '早晨啊',
     US: 'Good morning',
   },{
-    CN: '上午好',
+    CN: '上午好haha',
     HK: '上午好',
     US: 'Good morning',
   },{
