@@ -1,5 +1,6 @@
 <template>
   <div>
+    <a-button type="primary" @click="jumpToPublicPage">jump</a-button>
     <p>query: {{$route.query}}</p>
     <p>params: {{$route.params}}</p>
   </div>
@@ -7,7 +8,12 @@
 
 <script>
   export default {
-    name: 'Demo'
+    name: 'Demo',
+    methods:{
+    jumpToPublicPage(){
+      this.$router.push('/public')
+    }
+  }
   }
 </script>
 

@@ -1,5 +1,6 @@
 <template>
   <page-layout title="单号：234231029431" logo="https://gw.alipayobjects.com/zos/rmsportal/nxkuOJlFJuAUhzlMTCEe.png">
+    <a-button type="primary" @click="jumpToPublicPage">jump</a-button>
     <detail-list size="small" :col="2" slot="headerContent">
       <detail-list-item term="创建人">曲丽丽</detail-list-item>
       <detail-list-item term="订购产品">XX服务</detail-list-item>
@@ -160,6 +161,9 @@ export default {
   methods: {
     onTabChange (key) {
       console.log(key)
+    },
+    jumpToPublicPage(){
+      this.$router.push({path: '/public'});
     }
   },
 }

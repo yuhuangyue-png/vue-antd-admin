@@ -1,7 +1,8 @@
 <template>
   <div class="footer">
     <div class="links">
-      <a target="_blank" :key="index" :href="item.link ? item.link : 'javascript: void(0)'" v-for="(item, index) in linkList">
+      <!-- 'javascript: void(0)'链接失效不刷新页面 -->
+      <a :key="index" :href="item.link ? item.link : 'javascript: void(0)'" v-for="(item, index) in linkList">
         <a-icon v-if="item.icon" :type="item.icon"/>{{item.name}}
       </a>
     </div>

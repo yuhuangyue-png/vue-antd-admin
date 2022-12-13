@@ -63,6 +63,7 @@ export default {
     },
     langAlias() {
       let lang = this.langList.find(item => item.key == this.lang)
+      console.log(111,lang)
       return lang.alias
     },
     menuWidth() {

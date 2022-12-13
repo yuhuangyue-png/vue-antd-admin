@@ -159,6 +159,11 @@ const options = {
           ]
         },
         {
+          path: 'public',
+          name: '公共页面',
+          component:  () => import('@/pages/public/PublicPage'),
+        },
+        {
           path: 'result',
           name: '结果页',
           meta: {

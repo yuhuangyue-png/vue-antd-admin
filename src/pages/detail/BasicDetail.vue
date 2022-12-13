@@ -1,5 +1,6 @@
 <template>
     <page-layout title="基础详情页">
+      <a-button type="primary" @click="jumpToPublicPage">jump</a-button>
       <a-card :bordered="false">
         <detail-list title="退款详情">
           <detail-list-item term="取货单号">1000000000</detail-list-item>
@@ -193,6 +194,11 @@ export default {
       goodsData,
       scheduleColumns,
       scheduleData
+    }
+  },
+  methods:{
+    jumpToPublicPage(){
+      this.$router.push('/public')
     }
   }
 }

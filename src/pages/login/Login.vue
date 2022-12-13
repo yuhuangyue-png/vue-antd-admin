@@ -41,6 +41,7 @@
               </a-input>
             </a-form-item>
             <a-form-item>
+              <!-- form item中使用了a-row实现一行中两个元素排布 -->
               <a-row :gutter="8" style="margin: 0 -4px">
                 <a-col :span="16">
                   <a-input size="large" placeholder="captcha">
@@ -97,14 +98,15 @@ export default {
   },
   methods: {
     ...mapMutations('account', ['setUser', 'setPermissions', 'setRoles']),
+    // 在form 上添加submit 可以通过getFieldValue获区账户与密码
     onSubmit (e) {
-      e.preventDefault()
+      e.preventDefault() //注意点
       this.form.validateFields((err) => {
         if (!err) {
           this.logging = true
           const name = this.form.getFieldValue('name')
           const password = this.form.getFieldValue('password')
-          login(name, password).then(this.afterLogin)
+          login(name, password).then(this.afterLogin) //有意思
         }
       })
     },
